@@ -5,14 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('Hotel:server');
+var debug = require('debug')('main');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
 /**
@@ -34,7 +34,7 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
-  var port = parseInt(val, 10);
+  var port = parseInt(val,10);
 
   if (isNaN(port)) {
     // named pipe
